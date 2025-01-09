@@ -16,7 +16,7 @@ jobs:
 
       - name: Generate your content
         run: |
-          npm ci
+          npm install
           npm start
 
       - name: Publish current workdir (which contains generated content) to GitHub Pages
