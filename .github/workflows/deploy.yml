@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate your content
-        working-directory: ./site-web
+        working-directory: site-web
         run: |
           npm ci
           npm run build
