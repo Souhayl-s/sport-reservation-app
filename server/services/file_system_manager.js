@@ -6,7 +6,7 @@ class FileSystemManager {
    * @param {string} path : le chemin qui correspond au fichier JSON
    * @returns {Promise<Buffer>} le contenu du fichier sous la forme de Buffer
    */
-  async cdreadFile(path) {
+  async readFile(path) {
     return await fs.promises.readFile(path);
   }
 }
