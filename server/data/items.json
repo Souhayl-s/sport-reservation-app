@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "Ballon de basket",
+      "category": "Basketball"
+    },
+    {
+      "id": "2",
+      "name": "Ballon de soccer",
+      "category": "Soccer"
+    },
+    {
+      "id": "3",
+      "name": "Raquette de tennis",
+      "category": "Tennis"
+    },
+    {
+      "id": "4",
+      "name": "Volley-ball",
+      "category": "Volleyball"
+    },
+    {
+      "id": "5",
+      "name": "Chronomètre",
+      "category": "Track"
+    }
+  ]
+}

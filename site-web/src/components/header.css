@@ -1,0 +1,48 @@
+.homepage-header {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: #fff;
+  max-height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.homepage-title {
+  font-size: 3rem;
+  margin-left: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.homepage-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.homepage-link:hover {
+  color: #f0f0f0;
+}
+
+.link-container {
+  margin-right: 32px;
+}
+
+.notification {
+  color: #ff5f6d;
+}
+
+.reservation-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.reservation-link:hover {
+  color: #ff5f6d;
+}

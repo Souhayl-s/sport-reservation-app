@@ -1,0 +1,129 @@
+.reservation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  width: 100%;
+  flex: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.reservation-form {
+  width: 60%;
+  background-color: #ff5f6d;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.reservation-form h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+select {
+  padding: 12px 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000000' width='18px' height='18px'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.flex-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #f0f0f0;
+  flex-wrap: wrap;
+  max-width: 600px;
+  gap: 20px;
+}
+
+.checkbox {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.checkbox-label {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.reset-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+  color: white;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.action-buttons button {
+  width: 48%;
+}

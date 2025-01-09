@@ -1,0 +1,40 @@
+#calendar {
+  width: 100%;
+  max-width: 60vw;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #ff5f6d;
+  max-height: 80vh;
+}
+
+table {
+  width: 100%;
+  border: 2px solid #ff5f6d;
+}
+
+th,
+td {
+  border: 2px solid #ff5f6d;
+  padding: 5px;
+  text-align: center;
+  width: 12%;
+}
+
+th {
+  background-color: #ffc371;
+}
+
+.reserved {
+  background: red;
+  color: white;
+}
+
+.available {
+  background: green;
+  color: white;
+}
+
+.reserved:hover {
+  scale: 1.05;
+  cursor: pointer;
+}

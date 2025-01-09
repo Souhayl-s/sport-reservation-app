@@ -1,0 +1,64 @@
+.facility-container {
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.facility-image {
+  text-align: center;
+  margin: 20px;
+  max-width: 30%;
+}
+
+.facility-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.plateau-info {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.plateau-info h2,
+p {
+  margin: 0;
+}
+
+.calendar-container {
+  width: 100%;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.reserve-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.reserve-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  color: white;
+}
