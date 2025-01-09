@@ -13,16 +13,16 @@ jobs:
         with:
           node-version: 18
 
-      # Step 3: Install dependencies and build the frontend in the 'frontend' directory
-      - name: Build Frontend
+      # Step 3: Install dependencies and build the site-web in the 'site-web' directory
+      - name: Build site-web
         run: |
-          cd site-web                # Change to the frontend directory
+          cd site-web                # Change to the site-web directory
           npm install                # Install dependencies
-          npm run build              # Build the app (output goes to frontend/dist/)
+          npm run build              # Build the app (output goes to site-web/dist/)
 
-      # Step 4: Deploy the frontend to GitHub Pages
+      # Step 4: Deploy the site-web to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          source-directory: ./site-web/dist  # The dist folder where the build is generated
+          publish_dir: ./site-web/dist  # The dist folder where the build is generated
