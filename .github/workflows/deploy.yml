@@ -1,28 +1,28 @@
-name: Deploying
-
-on:
-  push:
-    branches:
-      - main
-
 jobs:
-  publish:
-    permissions:
-      contents: write
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out
-        uses: actions/checkout@v4
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Generate your content
-        working-directory: site-web
-        run: |
-          npm ci
-          npm run build
-
-      - name: Publish current workdir (which contains generated content) to GitHub Pages
-        uses: rayluo/github-pages-overwriter@v1.3
-
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          source-directory: ./site-web/dist
-          target-branch: gh-pages
+          node-version: 18
+
+      # Step 3: Install dependencies and build the frontend in the 'frontend' directory
+      - name: Build Frontend
+        run: |
+          cd site-web                # Change to the frontend directory
+          npm install                # Install dependencies
+          npm run build              # Build the app (output goes to frontend/dist/)
+
+      # Step 4: Deploy the frontend to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source-directory: ./site-web/dist  # The dist folder where the build is generated
