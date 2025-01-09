@@ -8,8 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
       # Step 1: Checkout code
       - name: Checkout code
@@ -23,8 +22,8 @@ jobs:
 
       # Step 3: Install dependencies and build the site-web in the 'site-web' directory
       - name: Build site-web
-        working-directory: site-web
         run: |
+          cd site-web                # Change to the site-web directory
           npm install                # Install dependencies
           npm run build              # Build the app (output goes to site-web/dist/)
 
