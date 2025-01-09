@@ -23,6 +23,6 @@ jobs:
         uses: rayluo/github-pages-overwriter@v1.3
 
         with:
-          source-directory: site-web
+          source-directory: ./site-web
 
           target-branch: gh-pages
