@@ -13,7 +13,7 @@ const HomePage = () => {
       <div className="card-container">
         {plateaus.map((plateau) => {
           return (
-            <Link to={`/plateau/${plateau.id}`} key={plateau.id}>
+            <Link to={`./plateau/${plateau.id}`} key={plateau.id}>
               <Plateau image={images[plateau.id]} title={plateau.name} />
             </Link>
           );
