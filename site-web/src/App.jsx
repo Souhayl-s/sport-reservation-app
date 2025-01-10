@@ -12,11 +12,11 @@ function App() {
       <ReservationProvider>
         <Header/>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/plateau/:plateauId" element={<PlateauPage />} />
-          <Route path="/reservation" element={<ReservationPage />} />
+          <Route path="." element={<HomePage />} />
+          <Route path="./plateau/:plateauId" element={<PlateauPage />} />
+          <Route path="./reservation" element={<ReservationPage />} />
           <Route
-            path="/reservation/:selectedPlateau"
+            path="./reservation/:selectedPlateau"
             element={<ReservationPage />}
           />
         </Routes>
