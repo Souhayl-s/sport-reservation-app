@@ -8,13 +8,13 @@ import Header from "./components/header";
 
 function App() {
   return (
-    <Router basename="/sport-reservation-app" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ReservationProvider>
         <Header/>
         <Routes>
-          <Route path="." element={<HomePage />} />
-          <Route path="./plateau/:plateauId" element={<PlateauPage />} />
-          <Route path="./reservation" element={<ReservationPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/plateau/:plateauId" element={<PlateauPage />} />
+          <Route path="/reservation" element={<ReservationPage />} />
           <Route
             path="./reservation/:selectedPlateau"
             element={<ReservationPage />}
