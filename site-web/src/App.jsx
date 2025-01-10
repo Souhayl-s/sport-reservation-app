@@ -12,7 +12,7 @@ function App() {
       <ReservationProvider>
         <Header/>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="./sport-reservation-app" element={<HomePage />} />
           <Route path="/plateau/:plateauId" element={<PlateauPage />} />
           <Route path="/reservation" element={<ReservationPage />} />
           <Route
