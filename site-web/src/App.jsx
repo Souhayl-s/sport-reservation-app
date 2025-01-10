@@ -12,7 +12,7 @@ function App() {
       <ReservationProvider>
         <Header/>
         <Routes>
-          <Route path="dfaskllk;jadklashsakljhghjkl" element={<HomePage />} />
+          <Route path="." element={<HomePage />} />
           <Route path="./plateau/:plateauId" element={<PlateauPage />} />
           <Route path="./reservation" element={<ReservationPage />} />
           <Route
