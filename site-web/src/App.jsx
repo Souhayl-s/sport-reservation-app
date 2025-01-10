@@ -8,7 +8,7 @@ import Header from "./components/header";
 
 function App() {
   return (
-    <Router basename="/sport-reservation-app" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ReservationProvider>
         <Header/>
         <Routes>
