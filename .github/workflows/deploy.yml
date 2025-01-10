@@ -24,9 +24,9 @@ jobs:
 
       # Step 3: Install dependencies and build the site-web in the 'site-web' directory
       - name: Build site-web
+        working-directory: site-web
         run: |
-          cd site-web                # Change to the site-web directory
-          npm install                # Install dependencies
+          npm ci                # Install dependencies
           npm run build              # Build the app (output goes to site-web/dist/)
 
       # Step 4: Deploy the site-web to GitHub Pages
