@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build --base=/sport-reservation-app",
+    "build": "vite build",
     "lint": "eslint ."
   },
   "dependencies": {
