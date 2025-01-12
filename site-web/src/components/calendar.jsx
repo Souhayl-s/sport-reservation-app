@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useReservationSystem } from "../hooks/useReservationSystem";
 import { days, times } from "../utils/constants";
 import { convertToTimestamp } from "../utils/timeConvert";
