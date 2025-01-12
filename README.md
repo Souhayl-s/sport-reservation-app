@@ -12,5 +12,5 @@ To run the project on a local machine, follow these 4 steps :
 
     
        
-**Note :** This project is an **adaptation** of an assignement from the course "**Methodes de developpement et conception d'application Web**" at Polytechnique Montreal.
+**Note :** This project is an **adaptation** of an assignement from the course "Methodes de developpement et conception d'application Web" at Polytechnique Montreal.
 
