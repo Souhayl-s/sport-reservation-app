@@ -11,7 +11,7 @@ function App() {
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ReservationProvider>
         <Header/>
-        <Routes>
+        <Routes base="sport-reservation-app">
           <Route path="/" element={<HomePage />} />
           <Route path="/plateau/:plateauId" element={<PlateauPage />} />
           <Route path="/reservation" element={<ReservationPage />} />
