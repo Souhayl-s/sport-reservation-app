@@ -8,7 +8,7 @@
     "coverage": "npm test -- --coverage",
     "lint": "eslint ./"
   },
-  "author": "LOG2440",
+  "author": "LOG2440,Souhayl-Sejjari",
   "license": "ISC",
   "description": "",
   "dependencies": {

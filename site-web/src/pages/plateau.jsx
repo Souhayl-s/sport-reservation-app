@@ -7,7 +7,6 @@ import images from "../utils/imageSource";
 import "./plateau.css";
 
 /**
- * TODO : Compléter l'affichage des informations du plateau et l'affichage du calendrier
  * @returns {JSX.Element} Page d'un plateau spécifique
  */
 function PlateauPage() {
@@ -56,7 +55,6 @@ function PlateauPage() {
         </div>
       </div>
       {isOpen && (
-        // TODO : Charger les informations de la réservation dans le popup
         <Popup
           reservationId={displayedReservation._id}
           content={

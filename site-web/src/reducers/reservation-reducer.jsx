@@ -13,7 +13,6 @@ export const initialState = {
 export const UPDATE_RESERVATION = "UPDATE_RESERVATION";
 export const RESET_RESERVATION = "RESET_RESERVATION";
 
-// TODO : Implémenter la gestion des 2 actions du Reducer
 export const reservationReducer = (state, action) => {
   switch (action.type) {
     case UPDATE_RESERVATION:

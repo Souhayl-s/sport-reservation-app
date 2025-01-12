@@ -3,7 +3,6 @@ const { HTTP_STATUS } = require("../utils/http");
 const router = require("express").Router();
 const { reservationService } = require("../services/reservation.service");
 
-// Fonction fournie pour la réinitialisation de la base de données
 router.delete("/reset", async (request, response) => {
   try {
     await reservationService.resetDatabase();

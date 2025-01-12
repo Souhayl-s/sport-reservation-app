@@ -25,23 +25,16 @@ class ReservationService {
     return this.dbService.db.collection(DB_CONSTS.DB_COLLECTION_RESERVATIONS);
   }
 
-  /**
-   * TODO : Récupérer la collection des items
-   */
   get itemsCollection() {
     return this.dbService.db.collection(DB_CONSTS.DB_COLLECTION_ITEMS);
   }
 
-  /**
-   * TODO : Récupérer la collection des plateaus
-   */
   get plateausCollection() {
     return this.dbService.db.collection(DB_CONSTS.DB_COLLECTION_PLATEAUS);
   }
 
   /**
    * Remplir la collection avec les données du fichier JSON
-   * Fonction fournie pour vous
    */
   async populateDb() {
     const items = JSON.parse(
@@ -55,7 +48,6 @@ class ReservationService {
   }
 
   /**
-   * TODO : Récupérer tous les items de la base de données
    * @returns {Promise<Object[]>} - Tous les items
    */
   async getAllItems() {
@@ -63,7 +55,6 @@ class ReservationService {
   }
 
   /**
-   * TODO : Récupérer un item par son identifiant
    * @param {string} itemId identifiant de l'item
    */
   async getItemById(itemId) {
@@ -71,7 +62,6 @@ class ReservationService {
   }
 
   /**
-   * TODO : Récupérer tous les plateaux de la base de données
    * @returns {Promise<Object[]>} - Tous les plateaux
    */
   async getAllPlateaus() {
@@ -79,7 +69,6 @@ class ReservationService {
   }
 
   /**
-   * TODO : Récupérer un plateau par son identifiant
    * @param {string} plateauId identifiant du plateau
    */
   async getPlateauById(plateauId) {
@@ -89,14 +78,12 @@ class ReservationService {
   }
 
   /**
-   * TODO : Vérifier la disponibilité d'un plateau pour une réservation en comparant les heures de début et de fin
    * avec les réservations existantes
    * @param {string} plateauId identifiant du plateau
    * @param {number} startTime heure de début de la réservation en millisecondes
    * @param {number} endTime heure de fin de la réservation en millisecondes
    */
   async checkPlateauAvailability(plateauId, startTime, endTime) {
-    // TODO : Tenir compte des heures de début et fin des réservations existantes
     const overlappingReservations = await this.reservationsCollection
       .find({
         $and: [
@@ -121,9 +108,6 @@ class ReservationService {
     return await this.reservationsCollection.find().toArray();
   }
 
-  /**
-   * TODO : Récupérer une réservation par son identifiant
-   */
   async getReservationById(id) {
     return (await this.getAllReservations()).find(
       (reservation) => reservation._id.toString() === id.toString()
@@ -135,8 +119,6 @@ class ReservationService {
   }
 
   /**
-   * TODO : Ajouter une nouvelle réservation.
-   * TODO : Gérer le cas de données valides (voir les commentaires ci-dessous)
    * @throws {Error} - Si le plateau n'existe pas
    * @throws {Error} - Si un item n'est pas autorisé pour ce plateau
    * @throws {Error} - Si la plage horaire n'est pas disponible
@@ -151,7 +133,6 @@ class ReservationService {
       clientName,
     } = reservationData;
 
-    // TODO : Vérifer la validité du plateau, des items et de la plage horaire
     const plateau = await this.getPlateauById(plateauId);
     const existPlateau = plateau !== undefined;
     if (!existPlateau) {
@@ -188,7 +169,6 @@ class ReservationService {
       createdAt: new Date(),
     };
 
-    // TODO : Insérer la réservation dans la base de données
     const reservationsList = await this.getAllReservations();
     reservationsList.push(reservation); // ajouter la nouvelle reservation
     await this.reservationsCollection.drop();
@@ -201,7 +181,6 @@ class ReservationService {
   }
 
   /**
-   * TODO : Supprimer une réservation par son identifiant
    * @param {string} id identifiant de la réservation
    * @returns {Promise<import("mongodb").DeleteResult>} - Résultat de la suppression
    */

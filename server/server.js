@@ -27,7 +27,6 @@ app.use('/reservations', reservationRouter.router);
 
 const server = app.listen(PORT, () => {
     dbService.connectToServer(DB_CONSTS.DB_URL).then(() => {
-        // TODO : peupler la base de données avec les données des fichiers JSON
         reservationService.populateDb();
         // eslint-disable-next-line no-console
         console.log(`Listening on port ${PORT}.`);

@@ -3,8 +3,7 @@ const DB_CONSTS = require('../utils/env');
 
 class DatabaseService {
   /**
-   * TODO : Remplir la collection avec les données seulement si elle est vide
-   * @param {string} collectionName nom de la collection sur MongoDB
+   * @param {string} collectionName 
    * @param {Array} data tableau contenant les documents à mettre dans la collection
    */
   async populateDb(collectionName, data) {

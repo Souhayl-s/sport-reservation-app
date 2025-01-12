@@ -1,7 +1,6 @@
 import "./plateau.css";
 
 /**
- * TODO : Afficher l'image et le titre du plateau
  * @param {string} image : lien vers l'image du plateau
  * @param {string} title : titre du plateau 
  * @returns {JSX.Element} : vignette d'un plateau

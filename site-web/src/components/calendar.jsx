@@ -5,17 +5,12 @@ import { convertToTimestamp } from "../utils/timeConvert";
 import "./calendar.css";
 
 /**
- * TODO : compléter la composante de calendrier
  * @param {Function} togglePopup - fonction pour ouvrir la popup
  * @param {String} plateauName - nom du plateau
  * @returns {JSX.Element} Composant de calendrier
  */
 const Calendar = ({ togglePopup, plateauName}) => {
   const { reservations, error } = useReservationSystem();
-
-  // TODO : Récupérer les réservations
-  useEffect(() => {
-  });
 
   const isReserved = (day, time) => {
     const currentTime = convertToTimestamp(day, time);

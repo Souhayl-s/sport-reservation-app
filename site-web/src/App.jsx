@@ -16,7 +16,7 @@ function App() {
           <Route path="/plateau/:plateauId" element={<PlateauPage />} />
           <Route path="/reservation" element={<ReservationPage />} />
           <Route
-            path="./reservation/:selectedPlateau"
+            path="/reservation/:selectedPlateau"
             element={<ReservationPage />}
           />
         </Routes>

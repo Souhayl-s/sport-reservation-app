@@ -14,13 +14,11 @@ const API_BASE_URL = "http://localhost:5020";
 export const useReservationSystem = () => {
   const [plateaus, setPlateaus] = useState([]);
 
-  // TODO : Créer un état pour les réservations et les items
   const [reservations, setReservations] = useState([]);
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // TODO : Récupérer les plateaux, les réservations et les items du serveur
 
   useEffect(() => {
 
@@ -59,9 +57,6 @@ export const useReservationSystem = () => {
     }
   };
 
-  /**
-   * TODO : Récupérer les items depuis le serveur
-   */
 
   const fetchItems = async () => {
     try {

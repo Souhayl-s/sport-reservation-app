@@ -35,7 +35,6 @@ function ReservationPage() {
     );
   };
 
-  // TODO: Gérer le changement de nom et mettre à jour l'état de la réservation en cours
   const handleNameChange = (event) => {
     const newName = event.target.value;
     setName(newName);
@@ -45,7 +44,6 @@ function ReservationPage() {
     });
   };
 
-  // TODO: Gérer le changement de plateau et mettre à jour l'état de la réservation en cours
   const handlePlateauChange = (event) => {
     const newPlateau = event.target.value;
     setPlateau(newPlateau);
@@ -55,7 +53,6 @@ function ReservationPage() {
     });
   };
 
-  // TODO : Mettre à jour l'état de la réservation en cours lors du changement de l'équipement
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
     const newEquipment = checked
@@ -68,7 +65,6 @@ function ReservationPage() {
     });
   };
 
-  // TODO : Gérer le changement du jour et mettre à jour l'état de la réservation en cours
   const handleDayChange = (event) => {
     const newDay = event.target.value;
     setDay(newDay);
@@ -78,7 +74,6 @@ function ReservationPage() {
     });
   };
 
-  // TODO : Gérer le changement de l'heure de début et mettre à jour l'état de la réservation en cours
   const handleStartTimeChange = (event) => {
     const newTime = event.target.value;
     setStartTime(newTime);
@@ -97,11 +92,7 @@ function ReservationPage() {
     });
   };
 
-  /**
-   * TODO : Vérifier l'état du formulaire et envoyer une requête de réservation si tout est valide
-   */
   const handleReservation = async () => {
-    // TODO : Vérifier que tous les champs sont remplis et afficher un message d'erreur si ce n'est pas le cas
 
     if (
       Object.values(state.currentReservation).some(
@@ -115,7 +106,6 @@ function ReservationPage() {
     const startDateTime = convertToTimestamp(day, startTime);
     const endDateTime = convertToTimestamp(day, endTime);
 
-    // TODO : Vérifier que l'heure de fin est après l'heure de début et afficher un message d'erreur si ce n'est pas le cas
     if (startDateTime >= endDateTime) {
       setErrorMessage("L'heure de fin doit etre apres l'heure de debut !");
       return;
@@ -137,9 +127,6 @@ function ReservationPage() {
     }
   };
 
-  /**
-   * TODO : Réinitialiser le formulaire et l'état de la réservation en cours
-   */
   const handleReset = () => {
     setName("");
     setPlateau("");
@@ -148,7 +135,6 @@ function ReservationPage() {
     setStartTime("");
     setEndTime("");
     setErrorMessage("");
-    // TODO : Réinitialiser l'état de la réservation en cours
     dispatch({ type: RESET_RESERVATION });
   };
 

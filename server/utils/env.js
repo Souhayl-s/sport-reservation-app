@@ -2,7 +2,6 @@ const DB_DB = "TP4";
 const DB_COLLECTION_RESERVATIONS = "RESERVATIONS";
 const DB_COLLECTION_PLATEAUS = "PLATEAUS";
 const DB_COLLECTION_ITEMS = "ITEMS";
-// TODO : fournir les bonnes informations de connexion
 const DB_URL = "mongodb+srv://admin:souhayl@cluster0.pdrwb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 exports.DB_DB = DB_DB;

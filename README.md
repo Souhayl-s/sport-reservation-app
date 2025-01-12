@@ -10,7 +10,5 @@ To run the project on a local machine, follow these 4 steps :
    ```
 4. Perform the same commands within the /site-web directory   
 
-    
-       
 **Note :** This project is an **adaptation** of an assignement from the course "**Methodes de developpement et conception d'application Web**" at Polytechnique Montreal.
 

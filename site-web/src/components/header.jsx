@@ -11,7 +11,6 @@ import { useContext } from "react";
 
 const Header = () => {
 
-  // TODO : Vérifier si une réservation est en cours
 
   const { state : currentState } = useContext(ReservationContext);
   const isReservationStarted = JSON.stringify(initialState) != JSON.stringify(currentState);
