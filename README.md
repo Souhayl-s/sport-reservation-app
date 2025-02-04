@@ -9,4 +9,4 @@ To run the project on a local machine :
    ```
 3. Perform the same commands within the **/site-web**  directory
 
-**Note :** This project is an **adaptation** of an assignement from the course "**Methodes de developpement et conception d'application Web**" at Polytechnique Montreal.
+**Note :** This project is an adaptation of an assignement from the course Methodes de developpement et conception d'application Web at Polytechnique Montreal.
